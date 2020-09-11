@@ -7,11 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    final static int ARGUMENT_IP = 1;
-    final static String MESSAGE = "some text";
-    final static String IP_ADDR = "228.5.6.7";
-    final static int PORT = 7777;
-    final static int BUFSIZE = 1024;
+    public final static int ARGUMENT_IP = 1;
+    public final static String MESSAGE = "some text";
+    public static final int TIME_GAP = 7000;
+    public static final int CLEANER_SLEEP_TIME = 2000;
+    public static final int SENDER_SLEEP_TIME = 1000;
+    public final static String IP_ADDR = "228.5.6.7";
+    public final static int PORT = 7777;
+    public final static int BUFSIZE = 1024;
 
     public static void main(String[] args) {
         String ip_addr = IP_ADDR;
@@ -52,30 +55,31 @@ public class Main {
                     while (true) {
                         try {
                             socket.send(packet);
-                            Thread.sleep(1000);
+                            Thread.sleep(SENDER_SLEEP_TIME);
                         } catch (IOException | InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
                 }
             };
+
             Runnable cleaner = new Runnable() {
                 @Override
                 public void run() {
                     while (true) {
                         connections.putAll(todo);
                         Map<String, Long> tmp = connections;
-                        System.out.println("\n--------------------------------");
+                        System.out.println("\n" + SEPARATOR);
                         for (Map.Entry<String, Long> val : tmp.entrySet()) {
                             Date date = new Date();
                             Long currentTime = date.getTime();
-                            if (val.getValue() + 7000 < currentTime) connections.remove(val.getKey());
+                            if (val.getValue() + TIME_GAP < currentTime) connections.remove(val.getKey());
                             else System.out.println(val.getKey());
                         }
-                        System.out.println("--------------------------------\n");
+                        System.out.println(SEPARATOR + "\n");
                         todo.clear();
                         try {
-                            Thread.sleep(2000);
+                            Thread.sleep(CLEANER_SLEEP_TIME);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -89,4 +93,6 @@ public class Main {
             e.printStackTrace();
         }
     }
+
+    public static final String SEPARATOR = "--------------------------------";
 }
