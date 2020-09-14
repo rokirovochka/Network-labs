@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="18e531ca-0c72-4b85-9729-9fbe12b17432" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -14,13 +35,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1hOeoc74C0b0r1sc4XLT0nJvlT7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -39,6 +64,7 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="client" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\nmaks\Documents\GitHub\Network-labs\BaudRateCalculation\fileToSend.pdf 127.0.0.1 7777" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -46,10 +72,26 @@
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="server" />
+      <option name="PROGRAM_PARAMETERS" value="7777" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Server" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
@@ -57,6 +99,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,57 +113,73 @@
       <workItem from="1599886746712" duration="6368000" />
       <workItem from="1599903916870" duration="38000" />
       <workItem from="1600081049268" duration="45000" />
+      <workItem from="1600081419085" duration="6194000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="75" key="#Project_Structure" timestamp="1599889357877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="75" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1599889357877" />
+    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600085727345">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600085727345" />
     <state x="191" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1599889893771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="191" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599889893771" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1599903952558">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1600081460746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1599903952558" />
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1599894822718">
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600081460746" />
+    <state width="1493" height="180" key="GridCell.Tab.0.bottom" timestamp="1600087676039">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1599894822718">
+    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
+    <state width="1493" height="180" key="GridCell.Tab.0.center" timestamp="1600087676039">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1599894822718">
+    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
+    <state width="1493" height="180" key="GridCell.Tab.0.left" timestamp="1600087676039">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1599894822718">
+    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
+    <state width="1493" height="180" key="GridCell.Tab.0.right" timestamp="1600087676039">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1599894822719">
+    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1600086562454">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599894822719" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1599894822718">
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1600086562454">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1599894822718">
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1600086562454">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599894822718" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1599894822719">
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1600086562454">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599894822719" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1599903932115">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
