@@ -3,9 +3,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class Client {
-    //public static final String EMPTY_STRING = "";
-    // public static final String DEFAULT_IP_ADDR = "127.0.0.1";
-    // public static final int DEFAULT_PORT = 7777;
     public static final int PORT_ARGUMENT = 2;
     public static final int IP_ADDR_ARGUMENT = 1;
     public static final int FILE_PATH_ARGUMENT = 0;
@@ -14,6 +11,9 @@ public class Client {
     private static String inputFilePath;
     private static String ipAddr;
     private static int port;
+
+    private static DataOutputStream out;
+    private static DataInputStream in;
 
     public static void main(String[] args) {
 
@@ -28,8 +28,14 @@ public class Client {
 
         try {
             socket = new Socket(ipAddr, port);
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+            DataInputStream in = new DataInputStream(socket.getInputStream());
             sendFileInfo();
             sendFile();
+
+            in.close();
+            out.close();
+            socket.close();
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -40,8 +46,8 @@ public class Client {
 
     private static void sendFileInfo() {
         try {
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-            DataInputStream in = new DataInputStream(socket.getInputStream());
+            out = new DataOutputStream(socket.getOutputStream());
+            in = new DataInputStream(socket.getInputStream());
 
             if (!socket.isOutputShutdown()) {
                 out.writeUTF(getFileNameFromFilePath(inputFilePath));
@@ -85,6 +91,7 @@ public class Client {
                 if (data != -1) {
                     bos.write(buffer, 0, 1024);
                 } else {
+                    getFeedBack();
                     bis.close();
                     bos.close();
                     break;
@@ -92,6 +99,20 @@ public class Client {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void getFeedBack() {
+        String result;
+        try {
+            while (!socket.isClosed()) {
+                if (in.available() > 0 && (result = in.readUTF()) != null) {
+                    System.out.println("Server: " + result);
+                    break;
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

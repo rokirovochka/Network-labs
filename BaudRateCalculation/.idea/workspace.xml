@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e531ca-0c72-4b85-9729-9fbe12b17432" name="Default Changelist" comment="" />
+    <list default="true" id="18e531ca-0c72-4b85-9729-9fbe12b17432" name="Default Changelist" comment="now client can send file to server" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +59,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -77,13 +78,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,7 +116,8 @@
       <workItem from="1599886746712" duration="6368000" />
       <workItem from="1599903916870" duration="38000" />
       <workItem from="1600081049268" duration="45000" />
-      <workItem from="1600081419085" duration="6194000" />
+      <workItem from="1600081419085" duration="9096000" />
+      <workItem from="1600161439428" duration="5693000" />
     </task>
     <servers />
   </component>
@@ -130,16 +134,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="now client can send file to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="now client can send file to server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="75" key="#Project_Structure" timestamp="1599889357877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="75" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1599889357877" />
-    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600085727345">
+    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600165939166">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600085727345" />
+    <state x="698" y="144" width="838" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600165939166" />
     <state x="191" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1599889893771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -148,42 +157,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600081460746" />
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom" timestamp="1600087676039">
+    <state width="1493" height="296" key="GridCell.Tab.0.bottom" timestamp="1600166762658">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
-    <state width="1493" height="180" key="GridCell.Tab.0.center" timestamp="1600087676039">
+    <state width="1493" height="296" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600166762658" />
+    <state width="1493" height="296" key="GridCell.Tab.0.center" timestamp="1600166762658">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
-    <state width="1493" height="180" key="GridCell.Tab.0.left" timestamp="1600087676039">
+    <state width="1493" height="296" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600166762658" />
+    <state width="1493" height="296" key="GridCell.Tab.0.left" timestamp="1600166762658">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
-    <state width="1493" height="180" key="GridCell.Tab.0.right" timestamp="1600087676039">
+    <state width="1493" height="296" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600166762658" />
+    <state width="1493" height="296" key="GridCell.Tab.0.right" timestamp="1600166762658">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600087676039" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1600086562454">
+    <state width="1493" height="296" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600166762658" />
+    <state width="1493" height="199" key="GridCell.Tab.1.bottom" timestamp="1600166454401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1600086562454">
+    <state width="1493" height="199" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600166454401" />
+    <state width="1493" height="199" key="GridCell.Tab.1.center" timestamp="1600166454401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1600086562454">
+    <state width="1493" height="199" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600166454401" />
+    <state width="1493" height="199" key="GridCell.Tab.1.left" timestamp="1600166454401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1600086562454">
+    <state width="1493" height="199" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600166454401" />
+    <state width="1493" height="199" key="GridCell.Tab.1.right" timestamp="1600166454401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600086562454" />
+    <state width="1493" height="199" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600166454401" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1599903932115">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1599903932115" />
+    <state x="320" y="153" width="895" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600165683565">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="320" y="153" width="895" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834" timestamp="1600165683565" />
     <state x="209" y="37" key="new project wizard" timestamp="1599886861906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -192,5 +205,15 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1599893925994" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.SocketException" package="java.net" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
