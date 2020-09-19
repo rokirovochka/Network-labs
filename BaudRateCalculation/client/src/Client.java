@@ -3,9 +3,11 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class Client {
-    public static final int PORT_ARGUMENT = 2;
-    public static final int IP_ADDR_ARGUMENT = 1;
-    public static final int FILE_PATH_ARGUMENT = 0;
+    private static final int PORT_ARGUMENT = 2;
+    private static final int IP_ADDR_ARGUMENT = 1;
+    private static final int FILE_PATH_ARGUMENT = 0;
+
+    private static final int BUFFER_SIZE = 1024;
 
     private static Socket socket;
     private static String inputFilePath;
@@ -16,7 +18,6 @@ public class Client {
     private static DataInputStream in;
 
     public static void main(String[] args) {
-
         if (args.length >= 3) {
             inputFilePath = args[FILE_PATH_ARGUMENT];
             ipAddr = args[IP_ADDR_ARGUMENT];
@@ -28,10 +29,12 @@ public class Client {
 
         try {
             socket = new Socket(ipAddr, port);
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-            DataInputStream in = new DataInputStream(socket.getInputStream());
+            out = new DataOutputStream(socket.getOutputStream());
+            in = new DataInputStream(socket.getInputStream());
+
             sendFileInfo();
             sendFile();
+            getFeedBack();
 
             in.close();
             out.close();
@@ -43,18 +46,11 @@ public class Client {
         }
     }
 
-
     private static void sendFileInfo() {
         try {
-            out = new DataOutputStream(socket.getOutputStream());
-            in = new DataInputStream(socket.getInputStream());
-
-            if (!socket.isOutputShutdown()) {
-                out.writeUTF(getFileNameFromFilePath(inputFilePath));
-                out.writeLong((new File(inputFilePath)).length());
-                out.flush();
-            }
-
+            out.writeUTF(getFileNameFromFilePath(inputFilePath));
+            out.writeLong((new File(inputFilePath)).length());
+            out.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,26 +70,16 @@ public class Client {
     }
 
     private static void sendFile() {
-        FileInputStream fis;
-        BufferedInputStream bis;
-        OutputStream os;
-        BufferedOutputStream bos;
         try {
             File input = new File(inputFilePath);
-            fis = new FileInputStream(input);
-            bis = new BufferedInputStream(fis);
-            os = socket.getOutputStream();
-            bos = new BufferedOutputStream(os);
-            byte[] buffer = new byte[1024];
+            FileInputStream fis = new FileInputStream(input);
+            byte[] buffer = new byte[BUFFER_SIZE];
             int data;
             while (true) {
-                data = bis.read(buffer);
+                data = fis.read(buffer);
                 if (data != -1) {
-                    bos.write(buffer, 0, 1024);
+                    out.write(buffer, 0, data);
                 } else {
-                    getFeedBack();
-                    bis.close();
-                    bos.close();
                     break;
                 }
             }
@@ -107,12 +93,8 @@ public class Client {
     private static void getFeedBack() {
         String result;
         try {
-            while (!socket.isClosed()) {
-                if (in.available() > 0 && (result = in.readUTF()) != null) {
-                    System.out.println("Server: " + result);
-                    break;
-                }
-            }
+            result = in.readUTF();
+            System.out.println("Server: " + result);
         } catch (IOException e) {
             e.printStackTrace();
         }

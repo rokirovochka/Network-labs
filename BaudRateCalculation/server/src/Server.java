@@ -21,7 +21,6 @@ public class Server {
         }
 
         try (ServerSocket server = new ServerSocket(serverPort)) {
-
             while (!server.isClosed()) {
                 Socket client = server.accept();
                 executorService.execute(new ClientHandler(client));
